@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Лайтбокс (модальная Галерея изображений)</title>
+</head>
+
+<body>
+    <h2 style="text-align:center">Лайтбокс (модальная Галерея изображений)</h2>
+
+    <div class="row-container">
+        <div class="column">
+            <img src="https://avatars.dzeninfra.ru/get-zen_doc/5212789/pub_62deaeed779b124ceeceba06_62deb7f8d0b08e4ea224c51b/scale_1200"
+                style=" width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+            <img src="https://avatars.dzeninfra.ru/get-zen_doc/4890660/pub_619631ebcb009a7cd3e3548a_61963254116135143005e355/scale_1200"
+                style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+            <img src="https://avatars.dzeninfra.ru/get-zen_doc/1878571/pub_62e25f796bd4062e735453b0_62e25f7b698ed43fc4d600ad/scale_1200"
+                style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+
+        <!-- Close btn container -->
+        <span class="close cursor" onclick="closeModal()">×</span>
+        <div class="modal-content">
+
+            <!-- Slides container -->
+            <div class="mySlides">
+                <div class="numbertext">1 / 3</div>
+                <img src="https://avatars.dzeninfra.ru/get-zen_doc/5212789/pub_62deaeed779b124ceeceba06_62deb7f8d0b08e4ea224c51b/scale_1200"
+                    style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 3</div>
+                <img src="https://avatars.dzeninfra.ru/get-zen_doc/4890660/pub_619631ebcb009a7cd3e3548a_61963254116135143005e355/scale_1200"
+                    style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 3</div>
+                <img src="https://avatars.dzeninfra.ru/get-zen_doc/1878571/pub_62e25f796bd4062e735453b0_62e25f7b698ed43fc4d600ad/scale_1200"
+                    style="width:100%">
+            </div>
+
+
+            <!-- Next, Prev btn container -->
+            <a class="prev cursor" onclick="plusSlides(-1)">❮</a>
+            <a class="next cursor" onclick="plusSlides(1)">❯</a>
+
+            <!-- Caption container -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <!-- Pagination container -->
+            <div class="pagintation-container">
+                <span class="dot cursor" onclick="currentSlide(1)"></span>
+                <span class="dot cursor" onclick="currentSlide(2)"></span>
+                <span class="dot cursor" onclick="currentSlide(3)"></span>
+            </div>
+
+            <!-- Demo slides container -->
+            <div class="demo-container">
+                <div class="column">
+                    <img class="demo cursor"
+                        src="https://avatars.dzeninfra.ru/get-zen_doc/5212789/pub_62deaeed779b124ceeceba06_62deb7f8d0b08e4ea224c51b/scale_1200"
+                        style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+                </div>
+                <div class="column">
+                    <img class="demo cursor"
+                        src="https://avatars.dzeninfra.ru/get-zen_doc/4890660/pub_619631ebcb009a7cd3e3548a_61963254116135143005e355/scale_1200"
+                        style="width:100%" onclick="currentSlide(2)" alt="Snow">
+                </div>
+                <div class="column">
+                    <img class="demo cursor"
+                        src="https://avatars.dzeninfra.ru/get-zen_doc/1878571/pub_62e25f796bd4062e735453b0_62e25f7b698ed43fc4d600ad/scale_1200"
+                        style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
